@@ -1,0 +1,62 @@
+.alert {
+   width: 100%;
+   display: flex;
+   padding: 14px;
+   margin-top: 10px;
+   border-radius: 3px;
+   margin-bottom: 50px;
+   align-items: center;
+   box-sizing: border-box;
+   justify-content: center;
+   border: 1px solid #5f5858;
+   background-color: #5f58581a;
+}
+
+.copy__btn {
+   width: 100%;
+   padding: 12px;
+   cursor: pointer;
+   margin-top: -20px;
+   border-radius: 3px;
+   text-align: center;
+   margin-bottom: 50px;
+   align-items: center;
+   box-sizing: border-box;
+   font-family: monospace;
+   border: 1px solid #5f5858;
+   background-color: #5f58581a;
+}
+
+.alert__message {
+   color: #000000;
+   font-size: 1rem;
+}
+
+.alert__copy {
+   display: none;
+   color: #471111;
+   cursor: pointer;
+   font-size: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+   .alert {
+      justify-content: space-between;
+   }
+
+   .alert__copy {
+      display: inline;
+   }
+
+   .copy__btn {
+      display: none;
+   }
+}
+
+@media screen and (min-width: 760px) {
+   .copy__btn,
+   .alert__copy,
+   .alert__message {
+      font-size: 0.9rem;
+   }
+}

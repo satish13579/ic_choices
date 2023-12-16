@@ -1,0 +1,234 @@
+.container {
+   width: 88%;
+   margin: 5rem auto 50px auto;
+   animation: scaleAnimation 0.2s;
+}
+
+.home {
+   width: 150px;
+   text-align: center;
+   margin: 60px auto 0 auto;
+}
+
+.home__link {
+   padding: 15px;
+   outline: none;
+   display: flex;
+   color: #181111;
+   cursor: pointer;
+   font-size: 1rem;
+   border-radius: 3px;
+   align-items: center;
+   text-decoration: none;
+   justify-content: center;
+   border: 2px solid #0678fb;
+   transition: box-shadow ease-in 0.1s;
+   box-shadow: 6px 6px 1px 1px #0678fb;
+}
+
+.vote__title {
+   color: #181111;
+   padding: 20px 0;
+   font-size: 1.3rem;
+   text-align: center;
+   border-radius: 3px;
+   margin-bottom: 4rem;
+   border: 2px solid #0678fb;
+   box-shadow: 8px 8px 1px 1px #0678fb;
+}
+
+.vote__subject {
+   display: flex;
+   margin-bottom: 20px;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.vote_progress__container_one,
+.vote_progress__container_two {
+   width: 100%;
+   height: 40px;
+   border: none;
+   color: #181111;
+   margin: 10px auto;
+   border-radius: 3px;
+   position: relative;
+   border: 2px solid #0678fb;
+   background-color: transparent;
+}
+
+.vote_progress__container_one {
+   margin-bottom: 4rem;
+}
+
+.vote_progress__container_two {
+   margin-bottom: 3.8rem;
+}
+
+.vote__subject_progress {
+   top: 0;
+   width: 180px;
+   height: 100%;
+   position: absolute;
+   background-color: #0678fb;
+   transition: width 0.2s ease-in-out;
+   animation: loading 1s ease-in-out infinite;
+}
+
+.vote__buttons {
+   gap: 70px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.vote__submit_btn {
+   outline: none;
+   padding: 15px;
+   display: flex;
+   color: #181111;
+   font-size: 1rem;
+   cursor: pointer;
+   border-radius: 3px;
+   align-items: center;
+   justify-content: center;
+   background-color: #fffefe;
+   border: 2px solid #0678fb;
+   transition: box-shadow ease-in 0.1s;
+   box-shadow: 6px 6px 1px 1px #0678fb;
+}
+
+.vote__details {
+   color: #181111;
+   margin-top: 4rem;
+   border-radius: 3px;
+   padding: 10px 15px;
+   border: 2px solid #d3b896;
+   border: 2px solid #0678fb;
+   box-shadow: 8px 8px 1px 1px #0678fb;
+}
+
+.vote__show_details {
+   padding: 8px;
+   outline: none;
+   display: flex;
+   color: #493434;
+   cursor: pointer;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.vote__desc_details {
+   font-size: 1rem;
+   margin-top: 16px;
+   line-height: 22px;
+   margin-bottom: 40px;
+   letter-spacing: 0.5px;
+   white-space: pre-line;
+}
+
+.vote__by,
+.vote__date {
+   display: flex;
+   font-size: 1rem;
+   align-items: center;
+   letter-spacing: 0.6px;
+   justify-content: flex-start;
+}
+
+.vote__date {
+   margin-block: 12px;
+}
+
+.vote__submit_btn:focus {
+   box-shadow: 3px 3px 1px 1px #0678fb;
+}
+
+.home__link:focus {
+   box-shadow: 3px 3px 1px 1px #0678fb;
+}
+
+.vote__details:hover .vote__show_details {
+   text-decoration: underline;
+}
+
+@keyframes scaleAnimation {
+   from {
+      opacity: 0;
+      transform: scale(1.1);
+   }
+
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
+}
+
+@keyframes loading {
+   0% {
+      background-color: rgba(6, 120, 251, 1);
+   }
+
+   50% {
+      background-color: rgba(6, 120, 251, 0.8);
+   }
+
+   100% {
+      background-color: rgba(6, 120, 251, 1);
+   }
+}
+
+@media screen and (min-width: 760px) {
+   .vote__title {
+      padding: 25px 0;
+      font-size: calc(1.3rem - 0.1rem);
+   }
+
+   .vote__date,
+   .vote__vote_by,
+   .vote__desc_details {
+      font-size: calc(0.9rem + 1px);
+   }
+
+   .vote__details {
+      padding: 15px 20px;
+   }
+
+   .vote__desc_details {
+      line-height: 28px;
+   }
+
+   .home__link,
+   .vote__submit_btn {
+      font-size: calc(0.9rem + 1px);
+   }
+
+   .vote__vote_by {
+      margin-bottom: 6px;
+   }
+}
+
+@media screen and (min-width: 880px) {
+   .container {
+      width: 80%;
+   }
+}
+
+@media screen and (min-width: 1030px) {
+   .container {
+      width: 70%;
+   }
+}
+
+@media screen and (min-width: 1375px) {
+   .container {
+      width: 50%;
+   }
+}
+
+@media screen and (min-width: 1720px) {
+   .container {
+      width: 40%;
+   }
+}

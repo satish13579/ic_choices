@@ -1,0 +1,23 @@
+.container {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.spinner {
+   width: 57px;
+   height: 57px;
+   border-radius: 100%;
+   box-sizing: border-box;
+   border: 6px solid #0678fb;
+   border-top-color: transparent;
+   animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+   to {
+      transform: rotate(360deg);
+   }
+}
