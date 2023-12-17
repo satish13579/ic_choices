@@ -98,7 +98,7 @@ export default function Home() {
    return (
       <>
          <Helmet>
-            <title>📢 Pilih</title>
+            <title>📢 IC Choices</title>
             <meta
                name="viewport"
                content="width=device-width, initial-scale=1"
@@ -106,7 +106,7 @@ export default function Home() {
             <meta charSet="utf-8" />
             <meta
                name="description"
-               content="Web app for making a voting and playing with your fu*king friends"
+               content="Web app for making a voting and make decisions in a decentrlized way with your friends"
             />
 
             {/* Open Graph */}
@@ -116,7 +116,7 @@ export default function Home() {
                content="https://pilih.vercel.app"
                key="ogurl"
             />
-            <meta property="og:site_name" content="📢 Pilih" key="ogsitename" />
+            <meta property="og:site_name" content="📢 IC Choices" key="ogsitename" />
             <meta
                property="og:image"
                content="https://i.ibb.co/LR67Djy/logo.jpg"
@@ -127,10 +127,10 @@ export default function Home() {
                content="https://i.ibb.co/LR67Djy/logo.jpg"
                key="ogimagesecureurl"
             />
-            <meta property="og:title" content="📢 Pilih" key="ogtitle" />
+            <meta property="og:title" content="📢 IC Choices" key="ogtitle" />
             <meta
                property="og:description"
-               content="Web app for making a voting and playing with your fu*king friends"
+               content="Web app for making a voting and make decisions in a decentrlized way with your friends"
                key="ogdesc"
             />
 
@@ -140,7 +140,7 @@ export default function Home() {
                property="twitter:image"
                content="https://i.ibb.co/LR67Djy/logo.jpg"
             />
-            <meta property="twitter:site" content="@calon_jenazah__" />
+            <meta property="twitter:site" content="@SatishCCY" />
          </Helmet>
 
          <ToastContainer
@@ -159,7 +159,7 @@ export default function Home() {
          <div className={styles.container}>
             <div className={styles.header}>
                <h1 className={styles.header__title}>
-                  <span style={{ marginRight: "-14px" }}>📢</span> PILIH
+                  <span style={{ marginRight: "-14px" }}>📢</span> IC Choices
                </h1>
                <button
                   disabled={isSubmit === true}
@@ -240,14 +240,14 @@ export default function Home() {
                <div className={styles.about__section}>
                   <h1 className={styles.about__sub_title}>😀 😁</h1>
                   <p className={styles.about__sub_desc}>
-                     Just web app to create voting and playing with your friends
+                     Just web app to create voting and make decisions in decentralized way
                   </p>
                </div>
 
                <div className={styles.about__section}>
                   <h1 className={styles.about__sub_title}>👌</h1>
                   <p className={styles.about__sub_desc}>
-                     Easy to use and you dont have to create an account
+                     Easy to use, just connect your internet identity
                   </p>
                </div>
 
@@ -262,7 +262,7 @@ export default function Home() {
                <div className={styles.about__section}>
                   <h1 className={styles.about__sub_title}>👀</h1>
                   <p className={styles.about__sub_desc}>
-                     Don't worry, I dont steal your data
+                     Don't worry, All votes are 100% On Chain
                   </p>
                </div>
             </div>
@@ -272,7 +272,7 @@ export default function Home() {
                   rel="noopener"
                   target="_blank"
                   className={styles.footer__link}
-                  href="https://twitter.com/calon_jenazah__"
+                  href="https://twitter.com/SatishCCY"
                >
                   <svg
                      width="25"
@@ -291,7 +291,7 @@ export default function Home() {
                   Built with jokes <span style={{ marginLeft: "6px" }}>🤪</span>
                </p>
 
-               <Link href="/usage">
+               <Link to="/usage">
                   <a className={styles.footer__usage}>
                      <svg
                         width="25px"

@@ -27,8 +27,13 @@ export default function SignInForm({ isSubmit, onSubmit, identity }) {
             identity,
          },
       });
+      console.log(parseInt(maxVote));
+      console.log(BigInt(parseInt(maxVote)));
+      console.log(BigInt(maxVote));
+   
 
-      var resp = await actor.addVoting(fullName.trim(), voteTitle.trim(), voteDesc.trim(), subjectOneName.trim(), subjectTwoName.trim(), parseInt(maxVote));
+      var resp = await actor.addVoting(fullName.trim(), voteTitle.trim(), voteDesc.trim(), subjectOneName.trim(), subjectTwoName.trim(), BigInt(parseInt(maxVote)));
+      console.log(resp);
       if (resp.statusCode == BigInt(200)) {
          setMaxVote(0);
          setFullName("");

@@ -63,8 +63,17 @@ actor {
         statusCode : Nat;
         msg : Text;
         voting : ?Voting;
+        caller : Principal;
     } {
         if (not Principal.isAnonymous(msg.caller)) {
+            if(id < 1000){
+                return {
+                    statusCode = 400;
+                    voting = null;
+                    msg = "Invalid Id for Voting";
+                    caller = msg.caller;
+                };
+            };
             var index : Nat = id - 1000;
             if (index < Array.size<Voting>(listings)) {
                 var voting = Array.subArray<Voting>(listings, index, 1);
@@ -72,20 +81,23 @@ actor {
                     statusCode = 200;
                     voting = ?voting[0];
                     msg = "Retrieved Voting Successfully.";
+                    caller = msg.caller;
                 };
             } else {
                 return {
                     statusCode = 400;
                     voting = null;
                     msg = "Invalid Id for Voting";
+                    caller = msg.caller;
                 };
             };
-
         } else {
             return {
                 statusCode = 404;
                 voting = null;
                 msg = "Connect Wallet To Access this Functionality";
+                caller = msg.caller;
+
             };
         };
     };
@@ -160,7 +172,7 @@ actor {
                 };
                 return {
                     statusCode = 200;
-                    msg = "Retrieved Voting Successfully.";
+                    msg = "Voted Successfully.";
                 };
             } else {
                 return {
